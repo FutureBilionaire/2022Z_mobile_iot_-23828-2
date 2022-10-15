@@ -1,4 +1,9 @@
-﻿<? xml version = "1.0" encoding = "utf-8" ?>
+﻿/*
+ * 
+ * 
+ * 
+ * 
+ * <? xml version = "1.0" encoding = "utf-8" ?>
 < ContentPage xmlns = "http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns: x = "http://schemas.microsoft.com/winfx/2009/xaml"
              x: Class = "MyFirstMauiApp.MainPage" >
@@ -16,7 +21,7 @@
                 HorizontalOptions = "Center" />
 
             < Label
-                Text = "Hello, World!"
+                Text = "Hello, .NET MAUI!"
                 SemanticProperties.HeadingLevel = "Level1"
                 FontSize = "32"
                 HorizontalOptions = "Center" />
@@ -39,3 +44,40 @@
     </ ScrollView >
 
 </ ContentPage >
+
+
+
+
+
+
+
+
+
+
+
+namespace MyFirstMauiApp;
+
+public partial class MainPage : ContentPage
+{
+	int count = 0;
+
+	public MainPage()
+	{
+		InitializeComponent();
+	}
+
+	private void OnCounterClicked(object sender, EventArgs e)
+    {
+        count += 10;
+
+        if (count == 1)
+            CounterBtn.Text = $"Clicked {count} time";
+        else
+            CounterBtn.Text = $"Clicked {count} times";
+
+        SemanticScreenReader.Announce(CounterBtn.Text);
+    }
+}
+
+
+*/
